@@ -221,7 +221,7 @@ export default function Home() {
       </div>
 
       <div className="w-full max-w-md my-4">
-        <AdBox slot="8997590677" size="medium" />
+        <AdBox slot="8997590677"/>
       </div>
 
       <div className="w-full max-w-md bg-gray-800 rounded-3xl shadow-xl p-6 mt-16 text-center relative z-10">
@@ -233,7 +233,7 @@ export default function Home() {
         </h2>
 
         <div className="my-4">
-          <AdBox slot="8997590677" size="medium" />
+          <AdBox slot="6396045313"/>
         </div>
 
         <button
