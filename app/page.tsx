@@ -149,13 +149,18 @@ export default function Home() {
   };
 
   const handleShare = () => {
-    const text = `내 점수는 ${score}점! 너도 도전해봐 🔥`;
-
+    const siteUrl = "https://click-blond.vercel.app/";
+    const text = `내 점수는 ${score}점! 너도 도전해봐 🔥\n사이트 바로가기: ${siteUrl}`;
+  
     if (navigator.share) {
-      navigator.share({ title: "Speed Game", text });
+      navigator.share({
+        title: "Speed Game",
+        text: `내 점수는 ${score}점! 너도 도전해봐 🔥`,
+        url: siteUrl, // 모바일 Web Share API용
+      });
     } else {
-      navigator.clipboard.writeText(text);
-      alert("클립보드에 복사됨!");
+      navigator.clipboard.writeText(text); // PC나 Web Share API 없는 환경용
+      alert("클립보드에 점수와 사이트 URL이 복사되었습니다!");
     }
   };
 
